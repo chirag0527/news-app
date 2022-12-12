@@ -1,4 +1,5 @@
 Created a small news app
+
 Design: https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl 
 
 
