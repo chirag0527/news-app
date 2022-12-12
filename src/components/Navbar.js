@@ -7,11 +7,11 @@ export default function Navbar(){
                 <img className="logo" src={Logo} alt="logo"/>
             </div>
             <div className="nav-right">
-                <p>Home</p>
-                <p>New</p>
-                <p>Popular</p>
-                <p>Trending</p>
-                <p>Categories</p>
+                <p className="nav-link">Home</p>
+                <p className="nav-link">New</p>
+                <p className="nav-link">Popular</p>
+                <p className="nav-link">Trending</p>
+                <p className="nav-link">Categories</p>
             </div>
         </nav>
     )
