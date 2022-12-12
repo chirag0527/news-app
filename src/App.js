@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar"
 import Main from "./components/Main"
+import React, {useEffect, useState} from "react"
+import ReactDOM from "react-dom"
 import './App.css';
 
 function App() {
@@ -22,24 +24,41 @@ function App() {
   const max4 = 20;
   const randomNumber4 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
 
-  let t1, d1, t2, d2, t3, d3, t4, d4 = ""
+  const [arr, setArr] = React.useState([,])
 
-  async function setvalues(){
+  let change = 0
 
+  const [t1, setT1] = React.useState("")
+  const [d1, setD1] = React.useState("")
+  const [t2, setT2] = React.useState("")
+  const [d2, setD2] = React.useState("")
+  const [t3, setT3] = React.useState("")
+  const [d3, setD3] = React.useState("")
+  const [t4, setT4] = React.useState("")
+  const [d4, setD4] = React.useState("")
+
+  async function SetValues(){
+    
     const response = await fetch(url);
     const json = await response.json();
 
-    t1 = json.articles[randomNumber].title
-    d1 = json.articles[randomNumber].description
-    t2 = json.articles[randomNumber2].title
-    d2 = json.articles[randomNumber2].description
-    t3 = json.articles[randomNumber3].title
-    d3= json.articles[randomNumber3].description
-    t4 = json.articles[randomNumber4].title
-    d4 = json.articles[randomNumber4].description
+    
+    setT1(json.articles[randomNumber].title)
+    setD1(json.articles[randomNumber].description)
+    setT2(json.articles[randomNumber2].title)
+    setD2(json.articles[randomNumber2].description)
+    setT3(json.articles[randomNumber3].title)
+    setD3(json.articles[randomNumber3].description)
+    setT4(json.articles[randomNumber4].title)
+    setD4(json.articles[randomNumber4].description)
+  
   }
 
-  console.log(t1, d1)
+  SetValues()
+  
+
+  change+= 1
+
 
   return (
     <><Navbar />
