@@ -1,3 +1,7 @@
+Created a small news app
+Design: https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
